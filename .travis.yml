@@ -1,0 +1,17 @@
+language: python
+python:
+- '2.7'
+- '3.4'
+- '3.5'
+before_install:
+- pip install nose
+script:
+- python setup.py nosetests
+deploy:
+  provider: pypi
+  user: devseed
+  password:
+    secure: XGS0zhJRwn6LQ5al2lJWdh0n0kvs0zRr6JE+a0Oj++ang5mkGZuXWwHfBjdXzvOXSHt6JzX+VhXVxCd93VnoY5tW/fsg5EJKI7oViINbUWpiU7RxBBxi8dnmqcuZd6iQxdfYD0YTJMEI4GYys2lLJ8fgsb7BaqISb2m+3VucL0JqkPo3X+LDGYPbpoqQnQ7fQlNn/L1u/BAu/Fkfgg2fX46mF64iOEEBGZarY/jQlPDRDvd1gAvlw3gsYr7YcmGZCJaKwrtLWiuz25L4r/3zrk7z9hdvnm5aRf0nzghgMB59r/7npYdsVqVHmNtTKc7tg2Iq0iSy7e7+0HhaZ6mM9d2BfqFQ3Gbefsu9Kk5k3ZFXgZRDsp5EokF07NhREZIMj9c8psDfIM9JYjjkTroygWz6XKBq5b+wmkKlaVJDbn9kKqPKpJUDJgmXZuPVNHyHkEJxohuC8dtuuy2LgB8vVfqebBmzapo6Zf+sz7EmfZ7e8L7Cxz4sm6u1jh89vaZFF3WTY/g9ow4hwtEUCWQb7GQaL/uiYABxe1VVYQQAmLGOlvkg3yN5tEgQD2+0eU7JzABofXbdKziCbsMaofmflf376MsAOuBKysG+1qmD32/q9b7B5ijekX1qN6JlIYiGADRY6mCU9oOXaM51c+Vv78h8Hmy0H6BHc9xWqiagk2s=
+  on:
+    repo: sat-utils/sat-testdata2
+    branch: master
